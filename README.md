@@ -1,106 +1,147 @@
-# Interview Amigo
-
-Interview Amigo is an AI-powered SaaS platform designed to help users enhance their job interview skills through interactive practice sessions. By leveraging AI-driven insights, users can refine their responses, gain confidence, and improve their chances of success in real interviews.
-
-## Features
-
-- **AI-Generated Interview Questions**: Users receive customized interview questions based on their uploaded resume, job description, and job title.
-- **Interactive Mock Interviews**: Users can respond to questions using their camera and microphone for a real interview experience.
-- **AI-Powered Feedback & Scoring**: Get instant feedback, including strengths, weaknesses, and improvement suggestions.
-- **Iterative Practice**: Users can refine their responses by reattempting interviews based on AI feedback.
-- **Secure Authentication**: Powered by Clerk for seamless and secure user authentication.
-- **Cloud-Based Data Management**: Supabase integration ensures efficient backend data storage and management.
-- **Seamless Payment Integration**: Stripe is used for handling subscription and payment transactions.
-
-## Tech Stack
-
-- **Frontend**: Next.js
-- **Authentication**: Clerk
-- **Backend & Database**: Supabase
-- **AI & Machine Learning**: OpenAI API
-- **Payments**: Stripe
-
-## Getting Started
-
-### Prerequisites
-
-Ensure you have the following installed:
-
-- Node.js (Latest LTS version recommended)
-- npm or yarn
-
-### Installation
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/top0329/interview-amigo.git
-   cd interview-amigo
-   ```
-2. Install dependencies:
-   ```bash
-   npm install
-   # or
-   yarn install
-   ```
-3. Set up environment variables by creating a `.env.local` file and adding the required keys:
-   ```env
-   NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
-   CLERK_SECRET_KEY=<your-clerk-secret-key>
-    
-   NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
-   NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
-    
-   NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/
-   NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/
-    
-   NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
-   NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
-    
-   OPENAI_API_KEY=<your-openai-api-key>
-    
-   OPENAI_ASSISTANT_ID=<your-openai-assistant-id>
-    
-   NEXT_PUBLIC_SERVICE_ID=<your-service-id>
-   NEXT_PUBLIC_TEMPLATE_ID=<your-template-id>
-   NEXT_PUBLIC_USER_ID=<your-user-id>
-    
-   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<your-stripe-publishable-key>
-   STRIPE_SECRET_KEY=<your-stripe-secret-key>
-   CLERK_WEBHOOK_SECRET=<your-clerk-webhook-secret>
-   STRIPE_WEBHOOK_SECRET=<your-stripe-webhook-secret>
-   ```
-4. Run the development server:
-   ```bash
-   npm run dev
-   # or
-   yarn dev
-   ```
-5. Open [http://localhost:3000](http://localhost:3000) in your browser.
-
-## Live Demo
-
-[Visit Interview Amigo](https://interviewamigo.com)
-
-## Screenshots
-
-### Step1
-<img width="1710" alt="STEP 1" src="https://github.com/user-attachments/assets/1feee4fe-058a-4867-a620-76c2970709b8" />
-
-### Step2
-<img width="1710" alt="STEP 2" src="https://github.com/user-attachments/assets/61e8d9db-d8d4-44dc-b524-9904a5b55005" />
-
-### Step3
-<img width="1710" alt="STEP 3" src="https://github.com/user-attachments/assets/78e3b3ae-f575-447f-b51b-998e05770f89" />
-
-## Contributing
-
-We welcome contributions! Please submit a pull request or open an issue for any suggestions or improvements.
-
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-Elevate your interview performance with **Interview Amigo** – your AI-powered interview coach!
-
+<div class="Box-sc-g0xbh4-0 QkQOb js-snippet-clipboard-copy-unpositioned undefined" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto" _msttexthash="7188246" _msthash="230">采访 Amigo</h1><a id="user-content-interview-amigo" class="anchor" aria-label="永久链接： 采访 Amigo" href="#interview-amigo" _mstaria-label="590512" _msthash="231"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="1961709282" _msthash="232">Interview Amigo 是一个人工智能驱动的 SaaS 平台，旨在帮助用户通过交互式练习课程提高求职面试技巧。通过利用 AI 驱动的洞察，用户可以优化他们的回答，获得信心，并提高他们在真实面试中成功的机会。</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5209451" _msthash="233">特征</h2><a id="user-content-features" class="anchor" aria-label="永久链接：功能" href="#features" _mstaria-label="370552" _msthash="234"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li _msttexthash="411698209" _msthash="235"><strong _istranslated="1">AI 生成的面试问题</strong>： 用户会收到根据他们上传的简历、职位描述和职位名称定制的面试问题。</li>
+<li _msttexthash="409977334" _msthash="236"><strong _istranslated="1">交互式模拟面试</strong>： 用户可以使用他们的摄像头和麦克风回答问题，以获得真实的面试体验。</li>
+<li _msttexthash="247714038" _msthash="237"><strong _istranslated="1">AI驱动的反馈和评分</strong>：获取即时反馈，包括优点、缺点和改进建议。</li>
+<li _msttexthash="241802847" _msthash="238"><strong _istranslated="1">迭代练习</strong>：用户可以通过根据 AI 反馈重新尝试访谈来优化他们的回答。</li>
+<li _msttexthash="268839831" _msthash="239"><strong _istranslated="1">安全身份验证</strong>： 由 Clerk 提供支持，可实现无缝和安全的用户身份验证。</li>
+<li _msttexthash="239951738" _msthash="240"><strong _istranslated="1">基于云的数据管理</strong>：Supabase 集成可确保高效的后端数据存储和管理。</li>
+<li _msttexthash="130829283" _msthash="241"><strong _istranslated="1">无缝支付集成</strong>：Stripe 用于处理订阅和支付交易。</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="8157760" _msthash="242">技术栈</h2><a id="user-content-tech-stack" class="anchor" aria-label="永久链接： 技术堆栈" href="#tech-stack" _mstaria-label="390897" _msthash="243"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li _msttexthash="12946934" _msthash="244"><strong _istranslated="1">前端</strong>：Next.js</li>
+<li _msttexthash="31748977" _msthash="245"><strong _istranslated="1">身份验证</strong>：文员</li>
+<li _msttexthash="29779880" _msthash="246"><strong _istranslated="1">后端和数据库</strong>：Supabase</li>
+<li _msttexthash="44372653" _msthash="247"><strong _istranslated="1">人工智能与机器学习</strong>：OpenAI API</li>
+<li _msttexthash="12435748" _msthash="248"><strong _istranslated="1">付款</strong>：Stripe</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="4603768" _msthash="249">开始</h2><a id="user-content-getting-started" class="anchor" aria-label="永久链接： 开始使用" href="#getting-started" _mstaria-label="591461" _msthash="250"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="9792913" _msthash="251">先决条件</h3><a id="user-content-prerequisites" class="anchor" aria-label="永久链接：先决条件" href="#prerequisites" _mstaria-label="566982" _msthash="252"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="50201905" _msthash="253">确保您已安装以下内容：</p>
+<ul dir="auto">
+<li _msttexthash="81621644" _msthash="254">Node.js （推荐最新的 LTS 版本）</li>
+<li _msttexthash="3370432" _msthash="255">npm 或 yarn</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="5773755" _msthash="256">安装</h3><a id="user-content-installation" class="anchor" aria-label="永久链接：安装" href="#installation" _mstaria-label="519259" _msthash="257"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ol dir="auto">
+<li><font _mstmutation="1" _msttexthash="24971414" _msthash="258">克隆存储库：</font><div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>git clone https://github.com/top0329/interview-amigo.git
+<span class="pl-c1">cd</span> interview-amigo</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="git clone https://github.com/top0329/interview-amigo.git
+cd interview-amigo" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</li>
+<li><font _mstmutation="1" _msttexthash="28631447" _msthash="259">安装依赖项：</font><div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>npm install
+<span class="pl-c"><span class="pl-c">#</span> or</span>
+yarn install</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="npm install
+# or
+yarn install" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</li>
+<li><font _mstmutation="1" _msttexthash="147735107" _msthash="260">通过创建文件并添加所需的键来设置环境变量：</font><code>.env.local</code><div class="highlight highlight-source-dotenv notranslate position-relative overflow-auto" dir="auto"><pre><span class="pl-v">NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-clerk-publishable-key&gt;</span>
+<span class="pl-v">CLERK_SECRET_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-clerk-secret-key&gt;</span>
+ 
+<span class="pl-v">NEXT_PUBLIC_CLERK_SIGN_IN_URL</span><span class="pl-k">=</span><span class="pl-s">/sign-in</span>
+<span class="pl-v">NEXT_PUBLIC_CLERK_SIGN_UP_URL</span><span class="pl-k">=</span><span class="pl-s">/sign-up</span>
+ 
+<span class="pl-v">NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL</span><span class="pl-k">=</span><span class="pl-s">/</span>
+<span class="pl-v">NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL</span><span class="pl-k">=</span><span class="pl-s">/</span>
+ 
+<span class="pl-v">NEXT_PUBLIC_SUPABASE_URL</span><span class="pl-k">=</span><span class="pl-s">&lt;your-supabase-url&gt;</span>
+<span class="pl-v">NEXT_PUBLIC_SUPABASE_ANON_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-supabase-anon-key&gt;</span>
+ 
+<span class="pl-v">OPENAI_API_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-openai-api-key&gt;</span>
+ 
+<span class="pl-v">OPENAI_ASSISTANT_ID</span><span class="pl-k">=</span><span class="pl-s">&lt;your-openai-assistant-id&gt;</span>
+ 
+<span class="pl-v">NEXT_PUBLIC_SERVICE_ID</span><span class="pl-k">=</span><span class="pl-s">&lt;your-service-id&gt;</span>
+<span class="pl-v">NEXT_PUBLIC_TEMPLATE_ID</span><span class="pl-k">=</span><span class="pl-s">&lt;your-template-id&gt;</span>
+<span class="pl-v">NEXT_PUBLIC_USER_ID</span><span class="pl-k">=</span><span class="pl-s">&lt;your-user-id&gt;</span>
+ 
+<span class="pl-v">NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-stripe-publishable-key&gt;</span>
+<span class="pl-v">STRIPE_SECRET_KEY</span><span class="pl-k">=</span><span class="pl-s">&lt;your-stripe-secret-key&gt;</span>
+<span class="pl-v">CLERK_WEBHOOK_SECRET</span><span class="pl-k">=</span><span class="pl-s">&lt;your-clerk-webhook-secret&gt;</span>
+<span class="pl-v">STRIPE_WEBHOOK_SECRET</span><span class="pl-k">=</span><span class="pl-s">&lt;your-stripe-webhook-secret&gt;</span></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=<your-clerk-publishable-key>
+CLERK_SECRET_KEY=<your-clerk-secret-key>
+ 
+NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+ 
+NEXT_PUBLIC_CLERK_SIGN_IN_FORCE_REDIRECT_URL=/
+NEXT_PUBLIC_CLERK_SIGN_UP_FORCE_REDIRECT_URL=/
+ 
+NEXT_PUBLIC_SUPABASE_URL=<your-supabase-url>
+NEXT_PUBLIC_SUPABASE_ANON_KEY=<your-supabase-anon-key>
+ 
+OPENAI_API_KEY=<your-openai-api-key>
+ 
+OPENAI_ASSISTANT_ID=<your-openai-assistant-id>
+ 
+NEXT_PUBLIC_SERVICE_ID=<your-service-id>
+NEXT_PUBLIC_TEMPLATE_ID=<your-template-id>
+NEXT_PUBLIC_USER_ID=<your-user-id>
+ 
+NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=<your-stripe-publishable-key>
+STRIPE_SECRET_KEY=<your-stripe-secret-key>
+CLERK_WEBHOOK_SECRET=<your-clerk-webhook-secret>
+STRIPE_WEBHOOK_SECRET=<your-stripe-webhook-secret>" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</li>
+<li><font _mstmutation="1" _msttexthash="35310197" _msthash="261">运行开发服务器：</font><div class="highlight highlight-source-shell notranslate position-relative overflow-auto" dir="auto"><pre>npm run dev
+<span class="pl-c"><span class="pl-c">#</span> or</span>
+yarn dev</pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="npm run dev
+# or
+yarn dev" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+</li>
+<li _msttexthash="28982291" _msthash="262">在浏览器中打开 <a href="http://localhost:3000" rel="nofollow" _istranslated="1">http://localhost:3000</a>。</li>
+</ol>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="12378808" _msthash="263">现场演示</h2><a id="user-content-live-demo" class="anchor" aria-label="永久链接： Live Demo" href="#live-demo" _mstaria-label="358150" _msthash="264"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://interviewamigo.com" rel="nofollow" _msttexthash="16177603" _msthash="265">访问访谈 Amigo</a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="10497227" _msthash="266">屏幕截图</h2><a id="user-content-screenshots" class="anchor" aria-label="永久链接： 屏幕截图" href="#screenshots" _mstaria-label="484146" _msthash="267"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6091189" _msthash="268">第 1 步</h3><a id="user-content-step1" class="anchor" aria-label="永久链接：Step1" href="#step1" _mstaria-label="259636" _msthash="269"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/7569992/417293575-1feee4fe-058a-4867-a620-76c2970709b8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5MzU3NS0xZmVlZTRmZS0wNThhLTQ4NjctYTYyMC03NmMyOTcwNzA5YjgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Mzk5ODhmMGY5ZTFhZmY1NTgwODljZjBjYmE2OTEzNDQ5YTM1MGRhNjc5MDUwOTNlMTkzZGM5N2U1ODIyZGI1YiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.soHjjXyCpOLg8PwtY7EJp_WqTQCJxXhnDP8L_g2XoTo"><img width="1710" alt="第 1 步" src="https://private-user-images.githubusercontent.com/7569992/417293575-1feee4fe-058a-4867-a620-76c2970709b8.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5MzU3NS0xZmVlZTRmZS0wNThhLTQ4NjctYTYyMC03NmMyOTcwNzA5YjgucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9Mzk5ODhmMGY5ZTFhZmY1NTgwODljZjBjYmE2OTEzNDQ5YTM1MGRhNjc5MDUwOTNlMTkzZGM5N2U1ODIyZGI1YiZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.soHjjXyCpOLg8PwtY7EJp_WqTQCJxXhnDP8L_g2XoTo" style="max-width: 100%;" _mstalt="41769" _msthash="270"></a>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6624865" _msthash="271">步骤 2</h3><a id="user-content-step2" class="anchor" aria-label="永久链接：Step2" href="#step2" _mstaria-label="259909" _msthash="272"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/7569992/417293916-61e8d9db-d8d4-44dc-b524-9904a5b55005.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5MzkxNi02MWU4ZDlkYi1kOGQ0LTQ0ZGMtYjUyNC05OTA0YTViNTUwMDUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjY2ZmE1MWJiNTc3MmIzNTZmYTllM2RmZjJiYWFjMTYxNzViNTIxMWQxZjIxZjZmNWI0NWZlOTU4ZjZjYjY1YyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.s13YcUJw0_DGL-IM3LqRg2j_Y0UUqaPbKqZvyZv3cn4"><img width="1710" alt="第 2 步" src="https://private-user-images.githubusercontent.com/7569992/417293916-61e8d9db-d8d4-44dc-b524-9904a5b55005.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5MzkxNi02MWU4ZDlkYi1kOGQ0LTQ0ZGMtYjUyNC05OTA0YTViNTUwMDUucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9MjY2ZmE1MWJiNTc3MmIzNTZmYTllM2RmZjJiYWFjMTYxNzViNTIxMWQxZjIxZjZmNWI0NWZlOTU4ZjZjYjY1YyZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.s13YcUJw0_DGL-IM3LqRg2j_Y0UUqaPbKqZvyZv3cn4" style="max-width: 100%;" _mstalt="41912" _msthash="273"></a>
+<div class="markdown-heading" dir="auto"><h3 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6624982" _msthash="274">步骤 3</h3><a id="user-content-step3" class="anchor" aria-label="永久链接：Step3" href="#step3" _mstaria-label="260182" _msthash="275"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<a target="_blank" rel="noopener noreferrer" href="https://private-user-images.githubusercontent.com/7569992/417294011-78e3b3ae-f575-447f-b51b-998e05770f89.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5NDAxMS03OGUzYjNhZS1mNTc1LTQ0N2YtYjUxYi05OThlMDU3NzBmODkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjFlZTcxYTM3ZWE2ODkxODgzYTlkYWQ1ODBlMTcyYTg3ZDVkNWI5Nzk4MGJlNGFhZWIzMmQxMWI1ZTA2N2U5OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.q1VFN30q7l04JAtrpAX-JARSJn271mTYj6-Csqoj4Sk"><img width="1710" alt="步骤 3" src="https://private-user-images.githubusercontent.com/7569992/417294011-78e3b3ae-f575-447f-b51b-998e05770f89.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3NDIxNzYwNjcsIm5iZiI6MTc0MjE3NTc2NywicGF0aCI6Ii83NTY5OTkyLzQxNzI5NDAxMS03OGUzYjNhZS1mNTc1LTQ0N2YtYjUxYi05OThlMDU3NzBmODkucG5nP1gtQW16LUFsZ29yaXRobT1BV1M0LUhNQUMtU0hBMjU2JlgtQW16LUNyZWRlbnRpYWw9QUtJQVZDT0RZTFNBNTNQUUs0WkElMkYyMDI1MDMxNyUyRnVzLWVhc3QtMSUyRnMzJTJGYXdzNF9yZXF1ZXN0JlgtQW16LURhdGU9MjAyNTAzMTdUMDE0MjQ3WiZYLUFtei1FeHBpcmVzPTMwMCZYLUFtei1TaWduYXR1cmU9NjFlZTcxYTM3ZWE2ODkxODgzYTlkYWQ1ODBlMTcyYTg3ZDVkNWI5Nzk4MGJlNGFhZWIzMmQxMWI1ZTA2N2U5OCZYLUFtei1TaWduZWRIZWFkZXJzPWhvc3QifQ.q1VFN30q7l04JAtrpAX-JARSJn271mTYj6-Csqoj4Sk" style="max-width: 100%;" _mstalt="42055" _msthash="276"></a>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="6354283" _msthash="277">贡献</h2><a id="user-content-contributing" class="anchor" aria-label="永久链接： 贡献" href="#contributing" _mstaria-label="521066" _msthash="278"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="232958804" _msthash="279">我们欢迎贡献！请提交拉取请求或打开问题以获取任何建议或改进。</p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto" _msttexthash="9675445" _msthash="280">许可证</h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license" _mstaria-label="331903" _msthash="281"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto" _msttexthash="69139122" _msthash="282">本项目根据 <a href="/top0329/interview-amigo/blob/main/LICENSE" _istranslated="1">MIT 许可证</a>获得许可。</p>
+<hr>
+<p dir="auto" _msttexthash="262560662" _msthash="283">使用 <strong _istranslated="1">Interview Amigo</strong> 提升您的面试表现 - 您的 AI 驱动的面试教练！</p>
+</article></div>
